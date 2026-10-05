@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Федерация самбо Новгородской области — официальный сайт</title>
+<meta name="description" content="Федерация самбо Новгородской области: календарь соревнований, положения и отчёты, документы, тренеры и клубы.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="top wrap">
+  <a class="brand" href="index.html">
+    <img src="images/logo.svg" alt="Логотип федерации самбо Новгородской области">
+    <span>Федерация самбо<br>Новгородской области</span>
+  </a>
+  <nav class="nav"><a href="about.html">О федерации</a><a href="events.html">Соревнования</a><a href="index.html#clubs">Клубы</a><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a></nav>
+  <div class="top-right">
+    <a class="tel" href="tel:+79658073707">+7 965 807-37-07</a>
+    <a class="btn btn-blue" href="index.html#clubs">Где заниматься</a>
+    <a class="tel-sm" href="tel:+79658073707" aria-label="Позвонить">Тел</a>
+    <button class="burger" aria-label="Меню" onclick="document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" onclick="this.classList.remove('open')"><a href="about.html">О федерации</a><a href="events.html">Соревнования</a><a href="index.html#clubs">Клубы</a><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a></nav>
+<section class="hero wrap">
+  <div class="photo">
+    <img src="images/sambo-velikiy-novgorod-3.webp" alt="Схватка на ковре">
+    <div class="line"></div>
+  </div>
+  <div class="hero-text">
+    <div class="eyebrow light">Региональная федерация · с 2013 года</div>
+    <h1>Федерация самбо Новгородской области</h1>
+    <p>Соревнования, подготовка тренеров и судей. Календарь, положения и отчёты — здесь. Тренировки — в клубах федерации.</p>
+    <div class="hero-btns">
+      <a class="btn btn-gold" href="#calendar">Календарь соревнований</a>
+      <a class="btn btn-line" href="#clubs">Где заниматься</a>
+    </div>
+  </div>
+</section>
+
+<section id="calendar" class="dark">
+  <div class="inner two">
+    <div>
+      <div class="eyebrow light">01 — Календарь</div>
+      <h2>Календарный план 2025</h2>
+      <p class="lead">Календарный план федерации на 2025 год. План на 2026 год готовится. Положения и отчёты — в архиве соревнований.</p>
+      <a class="btn btn-line-sm" href="events.html" style="margin-top:32px">Все соревнования и архив</a>
+    </div>
+    <div class="cal"><div class="crow" data-until="2025-01-19"><div class="d">19<small>января</small></div><div><div class="t">Первенство Новгородской области по самбо среди юношей и девушек 12–14 и 14–16 лет</div><div class="place">Великий Новгород, Центральная спортивная арена СШ «Спорт-индустрия»</div></div><div class="lvl">областное</div></div><div class="crow" data-until="2025-03-16"><div class="d">14–16<small>марта</small></div><div><div class="t">Всероссийский турнир «Кубок городов трудовой доблести» по самбо</div><div class="place">Боровичи</div></div><div class="lvl">всероссийский</div></div><div class="crow" data-until="2025-11-02"><div class="d">1–2<small>ноября</small></div><div><div class="t">Межрегиональные соревнования по самбо среди юношей и девушек «Новый вектор»</div><div class="place">Великий Новгород</div></div><div class="lvl">межрегиональный</div></div><div class="crow" data-until="2025-11-15"><div class="d">15<small>ноября</small></div><div><div class="t">Всероссийский день самбо</div><div class="place">Великий Новгород</div></div><div class="lvl"></div></div></div>
+  </div>
+</section>
+<script>
+(function(){
+  var t=new Date();t.setHours(0,0,0,0);
+  document.querySelectorAll('[data-until]').forEach(function(r){var d=new Date(r.dataset.until+'T23:59:59');if(d<t)r.classList.add('past');});
+  var tabs=document.querySelectorAll('.ytab'),panels=document.querySelectorAll('.ypanel');
+  function show(y){tabs.forEach(function(b){b.classList.toggle('on',b.dataset.year===y)});panels.forEach(function(p){p.classList.toggle('on',p.dataset.year===y)});}
+  tabs.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.year);history.replaceState(null,'','#'+b.dataset.year)})});
+  var h=location.hash.slice(1); if(h&&document.querySelector('.ypanel[data-year="'+h+'"]'))show(h);
+})();
+</script>
+<section id="clubs" class="sec two" style="align-items:start">
+  <div>
+    <div class="eyebrow">02 — Где заниматься</div>
+    <h2>Клубы федерации</h2>
+    <p class="lead">Федерация не проводит тренировки. Занятия ведут клубы, с которыми у федерации договор: выберите клуб и свяжитесь с тренером напрямую.</p>
+  </div>
+  <div class="clubs"><div class="club">
+      <h3>Спортивный клуб «Эверест»</h3>
+      <p>Объединяет тренеров федерации, проводит тренировки по дзюдо и самбо для детей и взрослых.</p>
+      <div class="club-links"><a class="btn btn-blue" href="http://everest53.ru" target="_blank" rel="noopener">Сайт клуба</a><a class="tel" href="tel:+79658073707">+7 965 807-37-07</a></div>
+    </div></div>
+</section>
+<section id="coaches">
+  <div class="coaches-head">
+    <div><div class="eyebrow">03 — Тренеры</div><h2>Тренерский состав</h2></div>
+    <p>Тренеры федерации. Тренируют в клубах федерации.</p>
+  </div>
+  <div class="coaches n5"><div class="coach">
+      <div class="photo"><img src="images/trener-yakovlev-dmitrii-nikolaevich.webp" alt="Яковлев Дмитрий Николаевич"></div>
+      <div class="exp"><b>8</b><span>лет тренерского<br>стажа</span></div>
+      <div><h3>Яковлев</h3><div class="fn">Дмитрий Николаевич</div><div class="rank">КМС по дзюдо и самбо</div></div>
+    </div><div class="coach">
+      <div class="photo"><img src="images/trener-svetlov-igor-vladimirovich.webp" alt="Светлов Игорь Владимирович"></div>
+      <div class="exp"><b>6</b><span>лет тренерского<br>стажа</span></div>
+      <div><h3>Светлов</h3><div class="fn">Игорь Владимирович</div><div class="rank">МС России по самбо и боевому самбо</div></div>
+    </div><div class="coach">
+      <div class="photo"><img src="images/trener-naumov-sergei-nikolaevich.webp" alt="Наумов Сергей Николаевич"></div>
+      <div class="exp"><b>12</b><span>лет тренерского<br>стажа</span></div>
+      <div><h3>Наумов</h3><div class="fn">Сергей Николаевич</div><div class="rank">Мастер спорта</div></div>
+    </div><div class="coach">
+      <div class="photo"><img src="images/trener-chistyakova-viktoriya-yurievna.webp" alt="Чистякова Виктория Юрьевна"></div>
+      <div class="exp"><b>9</b><span>лет тренерского<br>стажа</span></div>
+      <div><h3>Чистякова</h3><div class="fn">Виктория Юрьевна</div><div class="rank">Мастер спорта</div></div>
+    </div><div class="coach">
+      <div class="photo"><img src="images/trener-logashova-anna-aleksandrovna.webp" alt="Логашева Анна Александровна"></div>
+      <div class="exp"><b>16</b><span>лет тренерского<br>стажа</span></div>
+      <div><h3>Логашева</h3><div class="fn">Анна Александровна</div><div class="rank">Мастер спорта по дзюдо и самбо</div></div>
+    </div></div>
+</section>
+<section id="about">
+  <div class="two">
+    <div class="eyebrow">04 — О федерации</div>
+    <div>
+      <p>Федерация самбо Новгородской области с 2013 года развивает самбо в регионе: проводит соревнования, мастер-классы и показательные выступления, готовит тренеров и судей.</p>
+      <div class="links">
+        <a class="link" href="about.html">Подробнее о федерации</a>
+        <a class="link" href="about.html#leadership">Руководство</a>
+        <a class="link" href="documents.html">Документы</a>
+      </div>
+    </div>
+  </div>
+  <div class="mosaic"><div class="photo"><img src="images/sambo-velikiy-novgorod-5.webp" alt="Самбо в Великом Новгороде" loading="lazy"></div><div class="photo"><img src="images/sambo-velikiy-novgorod-2.webp" alt="Самбо в Великом Новгороде" loading="lazy"></div><div class="photo"><img src="images/sambo-velikiy-novgorod-4.webp" alt="Самбо в Великом Новгороде" loading="lazy"></div><div class="photo"><img src="images/sambo-velikiy-novgorod-6.webp" alt="Самбо в Великом Новгороде" loading="lazy"></div><div class="photo"><img src="images/sambo-velikiy-novgorod-7.webp" alt="Самбо в Великом Новгороде" loading="lazy"></div></div>
+</section>
+<section class="partners">
+  <div class="eyebrow">Партнёры и организации</div>
+  <div class="grid"><div class="p"><img src="images/partners-minsporta.png" alt="Министерство спорта Новгородской области" title="Министерство спорта Новгородской области" loading="lazy"></div><div class="p"><img src="images/partners-csp.png" alt="Центр спортивной подготовки" title="Центр спортивной подготовки" loading="lazy"></div><div class="p"><img src="images/partners-nmc.png" alt="Новгородский молодёжный центр" title="Новгородский молодёжный центр" loading="lazy"></div><div class="p"><img src="images/partners-everest.png" alt="Спортивный клуб «Эверест»" title="Спортивный клуб «Эверест»" loading="lazy"></div><div class="p"><img src="images/partners-judo.svg" alt="Федерация дзюдо Новгородской области" title="Федерация дзюдо Новгородской области" loading="lazy"></div><div class="p"><img src="images/partners-plumar.png" alt="«Плюмар»" title="«Плюмар»" loading="lazy"></div></div>
+</section>
+<section id="contacts" class="dark">
+  <div class="inner two">
+    <div>
+      <div class="eyebrow light">05 — Контакты</div>
+      <h2>Связаться с федерацией</h2>
+      <a class="big" href="tel:+79658073707">+7 965 807-37-07</a>
+      <div class="clist">
+        <a href="mailto:edinobori_vn@mail.ru">edinobori_vn@mail.ru</a>
+        <a href="https://vk.me/public176636064" target="_blank" rel="noopener">Написать в группу ВКонтакте</a>
+        <div>173009, Великий Новгород,<br>ул. Волотовская, д. 7, к. 1</div>
+      </div>
+    </div>
+    <div class="map">
+      <iframe title="Карта: Великий Новгород, ул. Волотовская, 7, к. 1" src="https://yandex.ru/map-widget/v1/?text=Великий%20Новгород%2C%20Волотовская%20улица%2C%207к1&z=16" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<footer>
+  <div>© 2026 Федерация самбо Новгородской области · sambo53.ru</div>
+  <div class="fl"><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a><a href="https://vk.com/public176636064">ВКонтакте</a></div>
+</footer>
+</body>
+</html>
