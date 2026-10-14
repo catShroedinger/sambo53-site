@@ -465,3 +465,29 @@ footer a:hover{color:#fff}
 @media(max-width:640px){.arow .note{font-size:14px}}
 /* пять тренеров — в один ряд на широком экране */
 @media(min-width:1101px){.coaches.n5{grid-template-columns:repeat(5,1fr);gap:24px}.coaches.n5 .exp b{font-size:48px}.coaches.n5 .coach .fn{font-size:18px}}
+/* ───── клубы федерации: по городам, карточки в две колонки (самбо, 12.10.2026) ───── */
+.club-city{font:600 12px/1 Manrope,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:8px 0 18px}
+.club-city:not(:first-child){margin-top:48px}
+.clubs-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 40px}
+.clubs .club{border-top:2px solid var(--ink);padding-top:20px;display:flex;flex-direction:column;gap:10px;min-width:0;scroll-margin-top:100px}
+.clubs .club h3{font-size:21px;line-height:1.2}
+.clubs .club .addr{font-size:16px;color:var(--text)}
+.clubs .club p{margin:0;font-size:15px;color:var(--muted)}
+.clubs .club .who{font:600 15px/1.4 Manrope,sans-serif}
+.clubs .club .who span{display:block;font:600 11px/1 Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.clubs .club-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.clubs .club-links .btn-out{height:42px;padding:0 16px;font-size:13px}
+/* тренер: клуб под званием, карточка без фото — инициалы */
+.coach .cl{margin-top:10px;font:600 14px/1.4 Manrope,sans-serif;color:var(--blue)}
+.coach .cl a{border-bottom:1px solid var(--line-dark)}
+.coach .cl a:hover{border-color:var(--gold)}
+.photo.ini{background:var(--blue);display:flex;align-items:center;justify-content:center}
+.photo.ini span{font:900 72px/1 Unbounded,Manrope,sans-serif;letter-spacing:-.04em;color:var(--gold-text)}
+@media(max-width:640px){
+  .clubs-grid{grid-template-columns:1fr;gap:28px}
+  .club-city:not(:first-child){margin-top:36px}
+  .clubs .club h3{font-size:19px}
+  .clubs .club-links .btn-out{width:auto}
+  .photo.ini span{font-size:36px}
+  .coach .cl{font-size:13px;margin-top:6px}
+}
